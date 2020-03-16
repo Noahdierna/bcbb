@@ -4,7 +4,17 @@ if (empty(session_id())) {session_start();}
 function openDb(){
     try
     {
-        $db = new PDO('mysql:host=mysql;dbname=bcbb;charset=utf8', 'root', 'root');
+
+        // $host = "mysql";
+        // $db = "bcbb";
+        // $username = "root";
+        // $pass = "root";
+
+        $host = "jfrpocyduwfg38kq.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+        $db = "rnb8wf5n5m5up0hf";
+        $username = "r2ewuvh1t475fgpq";
+        $pass = "e60wmjospqzy38mu";
+        $db = new PDO("mysql:host=" . $host . "; dbname=" . $db, $username, $pass);
         return $db;
     }
     catch(Exception $e)
