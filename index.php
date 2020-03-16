@@ -65,8 +65,6 @@ include('_nav.php');
         </table>
     </div>
 </div>
-
-<?php
+<?php 
 include('_footer.php');
 ?>
-
